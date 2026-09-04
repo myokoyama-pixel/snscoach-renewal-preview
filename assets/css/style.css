@@ -76,12 +76,30 @@ li{list-style:none}
   clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)}
 @media(max-width:860px){.hero::after{display:none}}
 .hero__inner{position:relative;z-index:2;max-width:860px}
+/* X（旧Twitter）のロゴタグ。#000 はX公式ロゴ色のため「黒を使わない」の例外 */
+.xtag{display:inline-flex;align-items:center;gap:9px;background:#000;color:#fff;
+  font-weight:800;font-size:.84rem;letter-spacing:.02em;padding:8px 17px 8px 14px;border-radius:999px;margin-bottom:20px}
+.xtag svg{width:15px;height:15px;fill:#fff;flex:0 0 auto}
 .hero h1{font-size:clamp(2.05rem,4.6vw,3.5rem);font-weight:900;line-height:1.32;letter-spacing:.01em;margin-bottom:26px}
 .hero h1 .em{color:var(--blue-deep)}
+/* スマホでは見出しが単語の途中で折り返さないようにする */
+.hero h1 .nb{white-space:nowrap}
+/* 見出しの中に置くXロゴ（文字と同じ大きさで並ぶ） */
+.h1x{display:inline-block;vertical-align:-.04em;line-height:1}
+.h1x svg{width:.86em;height:.86em;fill:#000;display:inline-block}
 .hero__lead{font-size:clamp(1rem,1.6vw,1.2rem);color:var(--text);max-width:660px;margin-bottom:34px}
 .hero__badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
 .hero__badges span{font-size:.86rem;font-weight:700;color:var(--blue-ink);border:1px solid var(--line);border-radius:999px;padding:7px 16px;background:var(--sky-2)}
 .hero__cta{display:flex;flex-wrap:wrap;gap:14px}
+@media(max-width:560px){
+  .hero{min-height:0;padding:118px 0 64px}
+  .hero h1{font-size:1.62rem;line-height:1.42;margin-bottom:20px}
+  .xtag{font-size:.76rem;padding:7px 14px 7px 12px;margin-bottom:16px}
+  .hero__lead{margin-bottom:26px}
+  .hero__badges{gap:8px;margin-bottom:28px}
+  .hero__badges span{font-size:.79rem;padding:6px 13px}
+  .hero__cta .btn{width:100%;justify-content:center}
+}
 
 /* page hero（下層） */
 .phero{position:relative;background:var(--paper);color:var(--ink);padding:158px 0 62px;overflow:hidden}
