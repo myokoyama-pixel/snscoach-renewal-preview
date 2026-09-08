@@ -86,3 +86,7 @@
 /* CTAボタン下の一行 */
 .cta-note{font-size:.86rem;color:var(--muted);margin-top:14px}
 .cta .cta-note{color:var(--on-dark-muted)}
+
+/* 実績カード：ラベルが折り返した1枚に引きずられず、4つの数字を同じ高さに揃える */
+.grid.g4 .stat{display:flex;flex-direction:column;justify-content:space-between}
+.grid.g4 .stat__label{margin-bottom:10px}
